@@ -2,14 +2,14 @@
   "articles": [
     {
       "titre": "Edite de la premiere mission",
-      "text": "J'edite la premiere missionn",
+      "text": "Ce texte a été editer sans probleme à10h41",
       "auteur": "Pascal",
       "id": 1
     },
     {
-      "titre": "J'Ai editer la deuxieme ",
-      "text": "Si tu lis ca c'est que tu as réussi !",
-      "auteur": "mistrall",
+      "titre": "Nouvel article",
+      "text": "Creer a 10h42\n\nedit a 10h43",
+      "auteur": "Pascalerr",
       "id": 2
     }
   ]
