@@ -11,21 +11,8 @@ const Editer = () => {
     const [text, setText] =  useState("article.text")
     const [auteur, setAuteur]= useState("article.auteur")
 
-    const {data: article, isPending, error}= UseFetch("http://localhost:8000/articles/"+ id)
-  
-        setTitre = article.titre
-     
-
-      
-       
- 
-
-    
-   
-
-    
-    
-
+    const {data: article, isPending, error}= UseFetch("http://localhost:8000/articles/"+ id)  
+        
     const handleClick = (e) => {
         e.preventDefault();
         const article = {titre,text,auteur}
