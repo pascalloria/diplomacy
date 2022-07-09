@@ -16,7 +16,7 @@ const Editer = () => {
         <div className="create">              
             {isPending && <div> Loading ....</div>}
             {error && <div> {error} </div>}
-            {article && ( <ArticleForm  article={article}  id={id} method="PUT" url={"http://localhost:8000/articles/"+ id} 
+            {article && ( <ArticleForm  article={article}  method="PUT" url={"http://localhost:8000/articles/"+ id} 
             />
              )}
      </div>)     ;

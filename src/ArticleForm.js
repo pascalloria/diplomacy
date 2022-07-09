@@ -5,8 +5,7 @@ import { useHistory } from "react-router-dom"
 
 
 const ArticleForm = (props) => {
-
-    const id = props.id
+    
     const history = useHistory()
     const url = props.url
 
