@@ -1,3 +1,21 @@
+Projet de site  Soluce pour le jeu "Diplomacy is not an Option".
+
+
+    Le site devra permettre aux admin d'ajouter , modifier et supprimer les articles
+    
+    Les utilisateurs quand a eux ne pourront que les consulter.
+
+    A faire : 
+        - Ajouter une gestion admin
+        - Permettre d'ajouter des images au articles
+        - Ajouter un editeur dans la textarea
+        - Redigé la page Contact
+        - .....
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

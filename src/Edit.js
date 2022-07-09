@@ -13,7 +13,8 @@ const Editer = () => {
     const {data: article, isPending, error}= UseFetch("http://localhost:8000/articles/"+ id) 
     
     return (         
-        <div className="create">              
+        <div className="create">             
+            <h2> Modifier votre Article </h2> 
             {isPending && <div> Loading ....</div>}
             {error && <div> {error} </div>}
             {article && ( <ArticleForm  article={article}  method="PUT" url={"http://localhost:8000/articles/"+ id} 

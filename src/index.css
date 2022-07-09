@@ -120,3 +120,8 @@ label {
 .article-page p {
   text-align: justify;
 }
+
+
+.page-not-found {
+  text-align: center;
+}

@@ -5,6 +5,8 @@ import Create from './Create';
 import React from "react";
 import ArticlePage from "./ArticlePage";
 import Editer from "./Edit";
+import PageNotFound from "./PageNotFound";
+import Contact from "./Contact"
 
 function App() {
 
@@ -26,6 +28,15 @@ function App() {
             </Route>
             <Route path="/edit/:id">
               <Editer />
+            </Route>
+
+            <Route path="/contact">
+              <Contact></Contact>
+
+            </Route>
+
+            <Route path="*">
+              <PageNotFound></PageNotFound>
             </Route>
           </Switch>          
         </div>        

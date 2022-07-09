@@ -28,32 +28,31 @@ const ArticleForm = (props) => {
     const [auteur, setAuteur]= useState(props.article.auteur)
     return (  
         <form >
-                        <div className="titre">
-                            <label> Titre  </label>            
-                            <input
-                                required
-                                value={titre}
-                                onChange ={(e) => setTitre(e.target.value)}                       
-                                ></input>
-                        </div>
-                        <div className="text">
-                            <label> Texte </label>
-                            <textarea
-                                required
-                                value={text}
-                                onChange = {e => setText(e.target.value)}
-                            ></textarea>
-                        </div>
-                        <div className="auteur">
-                            <label> Auteur </label>
-                            <input type="text"
-                                required
-                                value={auteur}
-                                onChange ={(e) => setAuteur(e.target.value)}  />
-                        </div>
-                        <button
-                        onClick={handleClick}> Poster</button>
-                    </form>
+            <div className="titre">
+                <label> Titre  </label>            
+                <input
+                    required
+                    value={titre}
+                    onChange ={(e) => setTitre(e.target.value)}                       
+                    ></input>
+            </div>
+            <div className="text">
+                <label> Texte </label>
+                <textarea
+                    required
+                    value={text}
+                    onChange = {e => setText(e.target.value)}
+                ></textarea>
+            </div>
+            <div className="auteur">
+                <label> Auteur </label>
+                <input type="text"
+                    required
+                    value={auteur}
+                    onChange ={(e) => setAuteur(e.target.value)}  />
+            </div>
+            <button onClick={handleClick}> Poster</button>
+        </form>
 
 
     );
