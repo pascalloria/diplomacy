@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Create from './Create';
 import React from "react";
 import ArticlePage from "./ArticlePage";
+import Editer from "./Edit";
 
 function App() {
 
@@ -22,6 +23,9 @@ function App() {
 
             <Route path="/article/:id">
               <ArticlePage></ArticlePage>
+            </Route>
+            <Route path="/edit/:id">
+              <Editer />
             </Route>
           </Switch>          
         </div>        

@@ -1,31 +1,53 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
+import UseFetch from "./UseFetch";
+import { useParams } from "react-router-dom";
 
-const Create = () => {
+const Editer = () => {
+
+    const {id} = useParams()
+    const history = useHistory() 
+    const [titre, setTitre] = useState("article.titre")
+    const [text, setText] =  useState("article.text")
+    const [auteur, setAuteur]= useState("article.auteur")
+
+    const {data: article, isPending, error}= UseFetch("http://localhost:8000/articles/"+ id)
+  
+        setTitre = article.titre
+     
+
+      
+       
+ 
+
     
-    const [titre, setTitre] = useState("")
-    const [text, setText] = useState("")
-    const [auteur, setAuteur]= useState("")
-    const history = useHistory()
+   
+
+    
+    
 
     const handleClick = (e) => {
         e.preventDefault();
         const article = {titre,text,auteur}
 
-        fetch ("http://localhost:8000/articles",{
-            method: "POST",
+        fetch ("http://localhost:8000/articles/"+ id,{
+            method: "PUT",
             headers:{"Content-Type" : "application/json"},
             body : JSON.stringify(article)           
         }) . then (()=> {
             history.push("/")
         })
     }
-
+   
+   
 
     return ( 
-        <div className="create">
-            <h2> Ajouter un Nouvelle Article</h2>
 
+        
+        <div className="create">        
+        {isPending && <div> Loading ....</div>}
+        {error && <div> {error} </div>}
+        {article && (    
             <form >
                 <div className="titre">
                     <label> Titre  </label>            
@@ -53,9 +75,9 @@ const Create = () => {
                 <button
                 onClick={handleClick}> Poster</button>
             </form>
-
+        )}            
         </div>
      );
 }
  
-export default Create;
+export default Editer;

@@ -1,14 +1,30 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import UseFetch from "./UseFetch";
 
 
 const ArticlePage = () => {
 
     const {id} = useParams()
-
+    const history = useHistory()
     const  {data: article, isPending, error} = UseFetch("http://localhost:8000/articles/"+ id)
-    console.log (article)
+
+    
+    const handleClick = (()=>{
+
+        fetch("http://localhost:8000/articles/"+ id,{
+            method:"DELETE",
+        }).then (()=> {
+            history.push("/")
+            
+        })
+    })
+
+    const handleClickModifier = (()=>{
+        history.push("/edit/"+id)
+        console.log("Edition en cours")
+
+    })
 
     return (        
         
@@ -21,6 +37,8 @@ const ArticlePage = () => {
                     <h2> {article.titre}</h2>
                     <p>   {article.text}</p>
                     <p> Ecrit par {article.auteur}</p>
+                    <button onClick={handleClick}> Supprimer</button>
+                    <button onClick={handleClickModifier}>Editer</button>
                  </div>
             )
             }
