@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
 import UseFetch from "./UseFetch";
 import { useParams } from "react-router-dom";
@@ -6,10 +6,7 @@ import ArticleForm from "./ArticleForm";
 
 const Editer = () => {
 
-    const {id} = useParams()
-    const history = useHistory()     
-    
-
+    const {id} = useParams()  
     const {data: article, isPending, error}= UseFetch("http://localhost:8000/articles/"+ id) 
     
     return (         

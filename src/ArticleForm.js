@@ -1,10 +1,15 @@
 import { useState } from "react"
-import React from "react"
+import React, {Component, PropTypes} from 'react';
 import { useHistory } from "react-router-dom"
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
 
 
 const ArticleForm = (props) => {
+    
+
+
     
     const history = useHistory()
     const url = props.url
@@ -38,11 +43,9 @@ const ArticleForm = (props) => {
             </div>
             <div className="text">
                 <label> Texte </label>
-                <textarea
-                    required
-                    value={text}
-                    onChange = {e => setText(e.target.value)}
-                ></textarea>
+                    <ReactQuill theme="snow"
+                     value={text} 
+                     onChange={setText}/>                            
             </div>
             <div className="auteur">
                 <label> Auteur </label>

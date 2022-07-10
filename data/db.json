@@ -1,16 +1,10 @@
 {
   "articles": [
     {
-      "titre": "Edite de la premiere mission",
-      "text": "Ce texte a été editer sans probleme à10h41\n\n\nreediter à 10h44",
+      "titre": "Premier article",
+      "text": "<p>Voici mon Pre<em>mier article,</em></p><p><em>cet article est écrit avec un Reactquill et interwave (markup)</em></p><p><br></p><p><em>\tCa marche vraiment bien avec la verison be</em></p><ol><li>liste 1</li><li>liste 2</li><li>liste 3</li><li>lista4</li></ol><p><br></p><p><em>Souligné</em>\"</p>",
       "auteur": "Pascal",
       "id": 1
-    },
-    {
-      "titre": "Nouvel article",
-      "text": "Creer a 10h42\n\nedit a 10h43",
-      "auteur": "Pascalerr",
-      "id": 2
     }
   ]
 }
