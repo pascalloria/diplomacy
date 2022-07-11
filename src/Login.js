@@ -3,19 +3,22 @@ import React from "react"
 
 const Login = () => {
 
-    const adminList = ["Mistrall","Pascal"]
+    // const adminList = ["Mistrall","Pascal"]
     
-    // {"admin": 
-    //     { "name": "Mistrall" , "mdp": "LOL"},
-    // }   
+    var adminList = {"Mistrall":"lool" , "Pascal": "OK"}  
     
-    const [input, setInput] = useState("")
- 
+    
+    const [logName, setLogName] = useState("")
+    const [password, setPassword] = useState("")
 
+    console.log( adminList["Mistrall"])
 
     const handleClick = (e) => {
         e.preventDefault()
-        if(adminList.includes(input) ) {            
+         if(password == adminList[logName] )  
+
+        
+        {            
             localStorage.setItem("Admin","true"); // sauvegarde une donné sur le navigateur 
             window.location.replace("/");    // recharge la page a la position indiqué (ici Home)
         
@@ -29,13 +32,18 @@ const Login = () => {
     return ( 
         <form>
             <div className="login">
-                <label > Name </label>
+                <label > LogName </label>
                 <input
                     required
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}>
+                    value={logName}
+                    onChange={(e) => setLogName(e.target.value)}>
                 </input>
-
+                <label > Password </label>
+                <input
+                    required
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}>
+                </input>
                 <button onClick={handleClick}>Log in</button>
             </div>
         </form>
@@ -43,5 +51,5 @@ const Login = () => {
 
      );
 }
- 
+
 export default Login;
