@@ -1,5 +1,5 @@
 import { useState } from "react"
-import React, {Component, PropTypes} from 'react';
+import React from 'react';
 import { useHistory } from "react-router-dom"
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
@@ -18,7 +18,7 @@ const ArticleForm = (props) => {
         e.preventDefault();
         const article = {titre,text,auteur}
 
-        fetch (url,{
+        fetch(url,{
             method: props.method,
             headers:{"Content-Type" : "application/json"},
             body : JSON.stringify(article)           

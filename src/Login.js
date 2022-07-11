@@ -1,21 +1,24 @@
 import { useState } from "react"
 import React from "react"
-import { useEffect } from "react"
-import { useHistory } from "react-router-dom"
 
 const Login = () => {
 
     const adminList = ["Mistrall","Pascal"]
+    
+    // {"admin": 
+    //     { "name": "Mistrall" , "mdp": "LOL"},
+    // }   
+    
     const [input, setInput] = useState("")
-    const history = useHistory()
+ 
 
 
     const handleClick = (e) => {
         e.preventDefault()
         if(adminList.includes(input) ) {            
-            localStorage.setItem("Admin","true");
-            window.location.replace("/");
-            // history.push("/");
+            localStorage.setItem("Admin","true"); // sauvegarde une donné sur le navigateur 
+            window.location.replace("/");    // recharge la page a la position indiqué (ici Home)
+        
         }      
         else {
             localStorage.setItem("Admin","false");        
@@ -24,7 +27,6 @@ const Login = () => {
     }
 
     return ( 
-
         <form>
             <div className="login">
                 <label > Name </label>

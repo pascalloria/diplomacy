@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { useHistory, useParams } from "react-router-dom";
 import UseFetch from "./UseFetch";
 import { Markup } from "interweave";
+import estAdmin from "./estAdmin";
 
 
 const ArticlePage = () => {
@@ -9,7 +10,7 @@ const ArticlePage = () => {
     const {id} = useParams()
     const history = useHistory()    
     const  {data: article, isPending, error} = UseFetch("http://localhost:8000/articles/"+ id)
-
+    const admin = estAdmin()
     
     const handleClick = (()=>{
 
@@ -37,8 +38,10 @@ const ArticlePage = () => {
                     <h2> {article.titre}</h2>                    
                     <Markup content={article.text} />
                     <p> Ecrit par {article.auteur}</p>
-                    <button onClick={handleClick}> Supprimer</button>
-                    <button onClick={handleClickModifier}>Editer</button>
+                    {admin && <div className="admin"><button onClick={handleClick}> Supprimer</button>
+                    <button onClick={handleClickModifier}>Editer</button></div>
+                    
+                    }
                  </div>
             )
             }
