@@ -22,12 +22,12 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>            
-            <Route path= "/create" >
+            <RouteAdmin path= "/create" >
                <Create />
-            </Route>
-            <Route path="/edit/:id">
+            </RouteAdmin>            
+            <RouteAdmin path="/edit/:id">
                 <Editer />
-            </Route>
+            </RouteAdmin>
             <Route path="/article/:id">
               <ArticlePage/>
             </Route>
@@ -35,7 +35,7 @@ function App() {
                 <Login />
             </Route>
             <Route path="/contact">
-              <Contact></Contact>
+              <Contact />
             </Route>
             <Route path="*">
               <PageNotFound></PageNotFound>
