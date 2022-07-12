@@ -4,7 +4,11 @@
       "titre": "Premier article",
       "text": "<p>Voici mon Pre<em>mier article,</em></p><p><em>cet article est écrit avec un Reactquill et interwave (markup)</em></p><p><br></p><p><em>\tCa marche vraiment bien avec la verison be</em></p><ol><li>liste 1</li><li>liste 2</li><li>liste 3</li><li>lista4</li></ol><p><br></p><p><em><u>Souligné</u></em>\"</p>",
       "auteur": "Pascal",
-      "id": 1
+      "id": 1,
+      "comments": [
+        {"text":"Test","auteur":"Pascal"},
+        {"text":"First","auteur":"Mistrall"}
+        ]
     },
     {
       "titre": "2 eme artcile",

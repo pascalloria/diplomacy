@@ -6,10 +6,11 @@ Projet de site  Soluce pour le jeu "Diplomacy is not an Option".
     Les utilisateurs quand a eux ne pourront que les consulter.
 
     A faire : 
-        - Ajouter une gestion admin
+        - Ajouter une gestion admin : OK 
+        - Ajouter un éditeur dans la textarea       
         - Permettre d'ajouter des images au articles
-        - Ajouter un editeur dans la textarea
         - Redigé la page Contact
+        - Ajouté commentaire
         - .....
 
 

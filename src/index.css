@@ -11,7 +11,7 @@
 }
 
 body{  
-  background-image: url("images/img1.webp");
+  background-image: url("images/Fond_Body.webp");
   background-position: center;
   background-size: cover;
 }
@@ -38,7 +38,7 @@ body{
   height: 100%;
   z-index: 1;
   opacity: 0.4;
-  background-image: url("images/Fond_body.jpg");
+  background-image: url("images/Fond_NavBar.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -141,4 +141,17 @@ label {
 
 .page-not-found {
   text-align: center;
+}
+
+.commentaireAfficher  {
+
+  border-radius: 0.1px;
+  border: solid 1px;
+  background-color: aquamarine;
+  padding: 2px;  
+  padding-left: 10px;
+}
+
+.commentAuteur {
+  font-size: 12px;
 }
