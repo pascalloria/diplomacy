@@ -15,6 +15,7 @@ const Login = () => {
 
     const handleClick = (e) => {
         e.preventDefault()
+        localStorage.setItem("Login",logName)
          if(password == adminList[logName] )  
 
         

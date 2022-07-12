@@ -13,7 +13,7 @@ const ArticlePage = () => {
     const  {data: article, isPending, error} = UseFetch("http://localhost:8000/articles/"+ id)
     const admin = estAdmin()
     const [comment,setComment] = useState("")
-    const [commentAuteur,setCommentAuteur] =useState("Default")
+    const [commentAuteur,setCommentAuteur] =useState(localStorage.getItem("Login"))
     const handleClick = (()=>{
 
         fetch("http://localhost:8000/articles/"+ id,{
@@ -38,6 +38,7 @@ const ArticlePage = () => {
             body :
              JSON.stringify({...article})     
         })
+        window.location.reload()
     })
    
     return (        
