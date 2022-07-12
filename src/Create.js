@@ -6,7 +6,8 @@ const Create = () => {
     const article ={
         "text" : "",
         "titre": "",
-        "auteur" : ""
+        "auteur" : "",
+        "comments": []
     }
 
     return ( 

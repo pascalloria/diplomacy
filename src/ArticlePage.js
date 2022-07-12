@@ -13,7 +13,7 @@ const ArticlePage = () => {
     const  {data: article, isPending, error} = UseFetch("http://localhost:8000/articles/"+ id)
     const admin = estAdmin()
     const [comment,setComment] = useState("")
-    
+    const [commentAuteur,setCommentAuteur] =useState("Default")
     const handleClick = (()=>{
 
         fetch("http://localhost:8000/articles/"+ id,{
@@ -29,12 +29,14 @@ const ArticlePage = () => {
     })
 
     const handleClickPoster = ( (e) => {
-        e.preventDefault();
-        fetch ("http://localhost:8000/articles/"+ id,{
+        e.preventDefault();       
+        article.comments.push({"text": comment, "auteur":commentAuteur});
+        console.log(comment)
+        fetch ("http://localhost:8000/articles/" +id ,{
             method : "PUT",
             headers:{"Content-Type" : "application/json"},
             body :
-             JSON.stringify({comments: comment})     
+             JSON.stringify({...article})     
         })
     })
    

@@ -1,0 +1,20 @@
+{
+  "articles": [
+    {
+      "titre": "Premier article",
+      "text": "<p>Voici mon Pre<em>mier article,</em></p><p><em>cet article est écrit avec un Reactquill et interwave (markup)</em></p><p><br></p><p><em>\tCa marche vraiment bien avec la verison be</em></p><ol><li>liste 1</li><li>liste 2</li><li>liste 3</li><li>lista4</li></ol><p><br></p><p><em><u>Souligné</u></em>\"</p>",
+      "auteur": "Pascal",
+      "id": 1,
+      "comments": [
+        {"text":"Test","auteur":"Pascal"},
+        {"text":"First","auteur":"Mistrall"}
+        ]
+    },
+    {
+      "titre": "2 eme artcile",
+      "text": "<p>Voir le rendu CSS !</p><p><br></p><p><strong>Reste a faire :</strong></p><p><br></p><p><strong><span class=\"ql-cursor\">﻿</span></strong></p><ol><li>ajouter une page admin</li><li>modifier la vue utilisateur</li><li>Ecrire des articles</li></ol>",
+      "auteur": "Pascal Loria",
+      "id": 2
+    }
+  ]
+}

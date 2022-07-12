@@ -16,7 +16,7 @@ const ArticleForm = (props) => {
 
     const handleClick = (e) => {
         e.preventDefault();
-        const article = {titre,text,auteur}
+        const article = {titre,text,auteur,comments}
 
         fetch(url,{
             method: props.method,
@@ -31,6 +31,7 @@ const ArticleForm = (props) => {
     const [titre, setTitre] = useState(props.article.titre)
     const [text, setText] =  useState(props.article.text)
     const [auteur, setAuteur]= useState(props.article.auteur)
+    const comments = props.article.comments
     return (  
         <form >
             <div className="titre">
