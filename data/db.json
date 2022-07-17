@@ -7,19 +7,11 @@
       "id": 1,
       "comments": [
         {
-          "text": "Test",
-          "auteur": "Pascal"
-        },
-        {
-          "text": "First",
+          "text": "Premier article Apres modification et transfert du code  qui gere les commentaires dans un sous-composant !",
           "auteur": "Mistrall"
         },
         {
-          "text": "Bonjour papa",
-          "auteur": "Mistrall"
-        },
-        {
-          "text": "rezrzer",
+          "text": "rtetret",
           "auteur": "Mistrall"
         }
       ]
@@ -48,9 +40,29 @@
         {
           "text": "erzrezr",
           "auteur": "rezrze"
+        },
+        {
+          "text": "tretertert",
+          "auteur": "Mistrall"
         }
       ],
       "id": 2
+    },
+    {
+      "titre": "Test creation d'article",
+      "text": "<p>Test de la création d'un article apres avoir deplacer le code gérant les commentaire dans un sous composant.</p>",
+      "auteur": "Mistrall",
+      "comments": [
+        {
+          "text": "tretertret",
+          "auteur": "Mistrall"
+        },
+        {
+          "text": "ytertert",
+          "auteur": "Mistrall"
+        }
+      ],
+      "id": 3
     }
   ]
 }

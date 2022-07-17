@@ -3,24 +3,20 @@ import { useHistory, useParams } from "react-router-dom";
 import UseFetch from "./UseFetch";
 import { Markup } from "interweave";
 import estAdmin from "./estAdmin";
-import { useState } from "react";
-
+import Comment from "./Comment";
 
 const ArticlePage = () => {
     
     const {id} = useParams()
     const history = useHistory()    
     const  {data: article, isPending, error} = UseFetch("http://localhost:8000/articles/"+ id)
-    const admin = estAdmin()
-    const [comment,setComment] = useState("")
-    const [commentAuteur,setCommentAuteur] =useState(localStorage.getItem("Login"))
+    const admin = estAdmin()    
     const handleClick = (()=>{
 
         fetch("http://localhost:8000/articles/"+ id,{
             method:"DELETE",
         }).then (()=> {
-            history.push("/")
-            
+            history.push("/")            
         })
     })
 
@@ -28,25 +24,12 @@ const ArticlePage = () => {
         history.push("/edit/"+id)       
     })
 
-    const handleClickPoster = ( (e) => {
-        e.preventDefault();       
-        article.comments.push({"text": comment, "auteur":commentAuteur});
-        console.log(comment)
-        fetch ("http://localhost:8000/articles/" +id ,{
-            method : "PUT",
-            headers:{"Content-Type" : "application/json"},
-            body :
-             JSON.stringify({...article})     
-        })
-        window.location.reload()
-    })
-   
+    
     return (        
         
         <div className="article-page">
             {isPending && <div>Loading....</div>}           
-            {error && <div>{error}</div>}
-            
+            {error && <div>{error}</div>}            
             {article && (
                 <div className="content">       
                             
@@ -59,25 +42,7 @@ const ArticlePage = () => {
                     <button onClick={handleClickModifier}>Editer</button></div>                 
                     }
                     <br />
-                    <div className="comment">
-                        {article.comments.map((comment) => (
-                            <div><br />
-                                <div className="commentaireAfficher">                            
-                                    <p>{comment.text} </p> 
-                                    <p className="commentAuteur"> ecrit par {comment.auteur}</p>                                                          
-                                </div>
-                            </div>
-                            
-                        ))}
-                        <br />
-                        <label> Commentaires</label>
-                        <textarea 
-                            value={comment}
-                            onChange ={(e) => setComment(e.target.value)}
-                            >                                
-                            </textarea>
-                        <button onClick={handleClickPoster}>Poster</button>
-                    </div>
+                    <Comment article ={article} id = {id}></Comment>
                  </div>
             )
             }
