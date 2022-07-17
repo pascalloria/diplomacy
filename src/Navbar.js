@@ -5,7 +5,11 @@ import estAdmin from "./estAdmin"
 
 
 const NavBar =()=> {
-    const admin=estAdmin()
+    const admin=estAdmin()  
+    let login = null
+    if(localStorage.getItem("Login")){
+      login = localStorage.getItem('Login')
+    } 
         
     return(
         <nav className="navbar">
@@ -14,7 +18,8 @@ const NavBar =()=> {
                 <Link to="/">Home</Link>
                 {admin && <Link to="/create"> Nouvel article</Link> }                                
                 <Link to="/Contact">Contact</Link>
-                <Link to="/login">Login</Link> 
+                {login &&<Link to="/login">{login}</Link>}
+                {!login &&<Link to="/login">Login</Link>}
             </div>
         </nav>
 
