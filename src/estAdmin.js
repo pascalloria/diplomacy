@@ -1,5 +1,5 @@
 const estAdmin = () => {
-    if(localStorage.getItem("Admin")=="true"){
+    if(localStorage.getItem("Admin")==="true"){
     return true
     } 
 }

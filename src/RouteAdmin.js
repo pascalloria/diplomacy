@@ -3,7 +3,7 @@ import {Route} from 'react-router-dom'
 
 const RouteAdmin = ({children, ...props}) => {     
 
-   if (localStorage.getItem("Admin") == "true"){  
+   if (localStorage.getItem("Admin") === "true"){  
       
       return (
          <Route {...props}>

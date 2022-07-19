@@ -11,15 +11,16 @@ Projet de site  Soluce pour le jeu "Diplomacy is not an Option".
                      
         - Permettre d'ajouter des images au articles
         - Redigé la page Contact
-        - Modération des commentaires
+        
         
 
 
     Fait :         
-        - Ajouter une gestion admin : OK 
+        - Ajouter une gestion admin
         - Ajouté commentaire
         - Ajouter un éditeur dans la textarea
         - Permetre aux utilisateur non logger de poster un commentaire et d'y inserer un nom. 
+        - Modération des commentaires
 
 
 
