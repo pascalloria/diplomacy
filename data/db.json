@@ -1,68 +1,17 @@
 {
   "articles": [
     {
-      "titre": "Premier article",
-      "text": "<p>Voici mon Pre<em>mier article,</em></p><p><em>cet article est écrit avec un Reactquill et interwave (markup)</em></p><p><br></p><p><em>\tCa marche vraiment bien avec la verison be</em></p><ol><li>liste 1</li><li>liste 2</li><li>liste 3</li><li>lista4</li></ol><p><br></p><p><em><u>Souligné</u></em>\"</p>",
-      "auteur": "Pascal",
-      "id": 1,
-      "comments": [
-        {
-          "text": "Premier article Apres modification et transfert du code  qui gere les commentaires dans un sous-composant !",
-          "auteur": "Mistrall"
-        },
-        {
-          "text": "rtetret",
-          "auteur": "Mistrall"
-        }
-      ]
-    },
-    {
-      "titre": "2 eme artcile",
-      "text": "<p>Voir le rendu CSS !</p><p><br></p><p><strong>Reste a faire :</strong></p><p><br></p><p><strong>﻿</strong></p><ol><li>ajouter une page admin</li><li>modifier la vue utilisateur</li><li>Ecrire des articles</li></ol>",
-      "auteur": "Pascal Loria",
-      "comments": [
-        {
-          "text": "Test",
-          "auteur": "Pascal"
-        },
-        {
-          "text": "J'ajoute un commentaire car je trouve que ca marche bien !!",
-          "auteur": "Default"
-        },
-        {
-          "text": "erzrezrzerze",
-          "auteur": "ezrezr"
-        },
-        {
-          "text": "Je suis admin et je commente !",
-          "auteur": "Mistrall"
-        },
-        {
-          "text": "erzrezr",
-          "auteur": "rezrze"
-        },
-        {
-          "text": "tretertert",
-          "auteur": "Mistrall"
-        }
-      ],
-      "id": 2
-    },
-    {
-      "titre": "Test creation d'article",
-      "text": "<p>Test de la création d'un article apres avoir deplacer le code gérant les commentaire dans un sous composant.</p>",
+      "titre": "Premiere mission !",
+      "text": "<p><strong>Build Order :</strong></p><p>\t<u>Jour 1 :</u></p><ul><li>Hutte des rammaseurs</li><li>hutte des pecheurs</li><li>Scierie</li><li>Caserne</li><li>Maison 1</li></ul><p><br></p><p>\t<u>Jour 2 ::</u></p><ul><li>5 Epéiste</li><li>Maison 2</li></ul><p><br></p><p>\t<u>Jour 3:</u></p><ul><li>Cimetierre</li><li>Maison de Creuseur de Tombes</li><li>Tour de bois  ( Dans la direction d'ou provient l'attaque)</li><li>Tour de garde</li><li>Mur autour des tours</li><li>9 Archers</li><li>Mine de pierre</li><li>Maison 3</li><li>Grenier</li><li>Hutte des rammaseurs</li><li>Maison 4</li></ul><p>\t\t</p><p><br></p><p><br></p><p><br></p>",
       "auteur": "Mistrall",
       "comments": [
         {
-          "text": "tretertret",
-          "auteur": "Mistrall"
-        },
-        {
-          "text": "ytertert",
-          "auteur": "Mistrall"
+          "text": "First",
+          "auteur": "Mistrall",
+          "id": 0
         }
       ],
-      "id": 3
+      "id": 4
     }
   ]
 }
