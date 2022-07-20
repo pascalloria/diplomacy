@@ -5,7 +5,7 @@ import estAdmin from "./estAdmin"
 
 
 const NavBar =()=> {
-    const admin=estAdmin()  
+    const admin=estAdmin()   
     let login = null
     if(localStorage.getItem("Login")){
       login = localStorage.getItem('Login')

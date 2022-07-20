@@ -9,9 +9,7 @@ const Login = () => {
     
     
     const [logName, setLogName] = useState("")
-    const [password, setPassword] = useState("")
-
-    console.log( adminList["Mistrall"])
+    const [password, setPassword] = useState("")    
 
     const handleClick = (e) => {
         e.preventDefault()
