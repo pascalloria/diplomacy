@@ -14,7 +14,7 @@ const Create = () => {
         <div className="create">
             <h2> Ajouter un Nouvelle Article</h2>
 
-            <ArticleForm article={article} method="POST" url="http://localhost:8000/articles/"></ArticleForm>
+            <ArticleForm article={article} method="POST" url="http://test3.pascalloria.fr/"></ArticleForm>
         </div>
      );
 }

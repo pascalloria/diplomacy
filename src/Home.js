@@ -6,7 +6,7 @@ import React from "react";
 const Home = () =>{
 
 
-    const {data:articles, isPending, error} = UseFetch("http://localhost:5500")
+    const {data:articles, isPending, error} = UseFetch("http://test3.pascalloria.fr/")
 
     
     return (
