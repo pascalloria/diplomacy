@@ -14,13 +14,14 @@ const Comment = (props) => {
         console.log(comment)
         props.article.comments.splice(comment,1);    
                
-        fetch ("http://localhost:8000/articles/" +props.id ,{
+        fetch ("http://test3.pascalloria.fr/" +props.id ,{
             method : "PUT",
             headers:{"Content-Type" : "application/json"},
             body :
              JSON.stringify({...props.article})     
         })
-        window.location.reload()
+
+            // setTimeout(window.location.reload(),10000)
     })
 
     const handleClickModifier = ((e)=>{
@@ -32,13 +33,14 @@ const Comment = (props) => {
         e.preventDefault();       
         props.article.comments.push({"text": comment, "auteur":commentAuteur});
         console.log(comment)
-        fetch ("http://localhost:8000/articles/" +props.id ,{
+        fetch ("http://test3.pascalloria.fr/" +props.id ,{
             method : "PUT",
             headers:{"Content-Type" : "application/json"},
             body :
              JSON.stringify({...props.article})     
         })
-        window.location.reload()
+        
+        // setTimeout(window.location.reload(),2000)
     })
    
     return (
@@ -46,10 +48,10 @@ const Comment = (props) => {
                         {props.article.comments.map((comment) => (                        
                             <div key={comID =comID +1}><br /> 
                                 <div className="commentaireAfficher" >    
-                                    <p className="comID"> #{comment.id=comID }</p>                      
+                                    <p className="comID"> #{comment.com_id=comID }</p>                      
                                     <p>{comment.text}</p> 
                                     <p className="commentAuteur"> ecrit par {comment.auteur}</p>   
-                                    {admin && <div className="admin"><button onClick={event => handleClickDelete(event,comment.id)}> Supprimer</button>
+                                    {admin && <div className="admin"><button onClick={event => handleClickDelete(event,comment.com_id)}> Supprimer</button>
                                     <button onClick={handleClickModifier}>Editer</button></div>                 
                                     }                                                       
                                 </div>
