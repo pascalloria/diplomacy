@@ -11,6 +11,8 @@ Projet de site  Soluce pour le jeu "Diplomacy is not an Option".
                      
         - Permettre d'ajouter des images au articles
         - Redigé la page Contact
+        - Remplacer les rechargement de page par une fonction de mise a jour interne a react.
+        - Gerer les props  via Context (mini redux)
         
         
 
