@@ -20,8 +20,9 @@ const Comment = (props) => {
             body :
              JSON.stringify({...props.article})     
         })
-
-            // setTimeout(window.location.reload(),10000)
+        .then( () => {
+            window.location.reload()
+            })
     })
 
     const handleClickModifier = ((e)=>{
@@ -39,8 +40,9 @@ const Comment = (props) => {
             body :
              JSON.stringify({...props.article})     
         })
-        
-        // setTimeout(window.location.reload(),2000)
+        .then( () => {
+        window.location.reload()
+        })
     })
    
     return (
@@ -69,7 +71,6 @@ const Comment = (props) => {
                             value={commentAuteur}
                             onChange= {(e)=> setCommentAuteur(e.target.value)}
                         >
-
                         </input>
 
                         <button onClick={handleClickPoster}>Poster</button>

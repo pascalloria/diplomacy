@@ -12,6 +12,9 @@ const ArticlePage = () => {
     const  {data: article, isPending, error} = UseFetch("http://test3.pascalloria.fr/"+ id)
     const admin = estAdmin()  
     console.log(id)  
+
+
+    
     const handleClick = (()=>{
 
         fetch("http://test3.pascalloria.fr/"+id,{

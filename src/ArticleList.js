@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ArtcileList = (props) => {
     const articles = props.articles
-    {console.log(articles)}
+    // {console.log(articles)}
     return (        
         <div className="articles">
             <h2> Campagne </h2>
