@@ -7,13 +7,12 @@ Projet de site  Soluce pour le jeu "Diplomacy is not an Option".
 
 
 
-    A faire : 
-                     
+    A faire :                     
        
         - Redigé la page Contact
         - Remplacer les rechargement de page par une fonction de mise a jour interne a react.
         - Gerer les props  via Context (mini redux)
-        - Redimensionner les images 
+       
         
         
 
@@ -31,7 +30,7 @@ Projet de site  Soluce pour le jeu "Diplomacy is not an Option".
                     app.use (bodyParser.json({limit: '20mb'}));  // midlleware
                 - ajout de la ligne :                 
                     app.use(bodyParser.urlencoded({limit: '20mb', extended: true}));
-
+        - Redimensionner et centrer les images ( Ajout d'une regle CSS .content img )
 
 
 
