@@ -9,10 +9,11 @@ Projet de site  Soluce pour le jeu "Diplomacy is not an Option".
 
     A faire : 
                      
-        - Permettre d'ajouter des images au articles
+       
         - Redigé la page Contact
         - Remplacer les rechargement de page par une fonction de mise a jour interne a react.
         - Gerer les props  via Context (mini redux)
+        - Redimensionner les images 
         
         
 
@@ -23,6 +24,13 @@ Projet de site  Soluce pour le jeu "Diplomacy is not an Option".
         - Ajouter un éditeur dans la textarea
         - Permetre aux utilisateur non logger de poster un commentaire et d'y inserer un nom. 
         - Modération des commentaires
+        - Permettre d'ajouter des images au articles - OK ( le serveur refuse les images trop grosse )
+            - Ajout d'une limitation de 2 MB pour la taille de l'image *
+            - regler la limite autorisé en fetch (POST / PUT) à 20 MB
+                - modification :
+                    app.use (bodyParser.json({limit: '20mb'}));  // midlleware
+                - ajout de la ligne :                 
+                    app.use(bodyParser.urlencoded({limit: '20mb', extended: true}));
 
 
 
