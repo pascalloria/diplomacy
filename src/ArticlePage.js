@@ -10,11 +10,8 @@ const ArticlePage = () => {
     const {id} = useParams()
     const history = useHistory()    
     const  {data: article, isPending, error} = UseFetch("http://test3.pascalloria.fr/"+ id)
-    const admin = estAdmin()  
-    console.log(id)  
+    const admin = estAdmin()      
 
-
-    
     const handleClick = (()=>{
 
         fetch("http://test3.pascalloria.fr/"+id,{
@@ -35,8 +32,7 @@ const ArticlePage = () => {
             {isPending && <div>Loading....</div>}           
             {error && <div>{error}</div>}            
             {article && (
-                <div className="content">       
-                            
+                <div className="content">                            
                     <h2> {article.titre}</h2>                    
                     <Markup content={article.text} />
                     <br />
@@ -47,7 +43,7 @@ const ArticlePage = () => {
                     }
                     <br />
                     <Comment article ={article} id = {id}></Comment>
-                 </div>
+                </div>
             )
             }
             
