@@ -33,7 +33,7 @@ const ArticlePage = () => {
             {error && <div>{error}</div>}            
             {article && (
                 <div className="content">                            
-                    <h2> {article.titre}</h2>                    
+                    <h2><strong> {article.titre}</strong></h2>                    
                     <Markup content={article.text} />
                     <br />
                     <p className="auteur"> Ecrit par {article.auteur}</p>
