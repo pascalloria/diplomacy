@@ -10,13 +10,13 @@ const NavBar =()=> {
     if(localStorage.getItem("Login")){
       login = localStorage.getItem('Login')
     } 
+    
+    const [isNavExtended, setIsNavExtended]= useState(false)
+    
     const handleExtendMenu = (e)=> {
         e.preventDefault();
         setIsNavExtended (!isNavExtended)
     }
-
-    const [isNavExtended, setIsNavExtended]= useState(false)
-    
     return(
         <nav className="navbar">
             

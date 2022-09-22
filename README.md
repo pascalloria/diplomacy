@@ -8,7 +8,9 @@ Projet de site  Soluce pour le jeu "Diplomacy is not an Option".
 
 
     A faire :                     
-       
+        - Responsive design
+            - ajout d'un bouton type "hamburger" dans la navbar pour la gestion des petits ecran" - ok
+            -  reduire la taille du titre
         - Redigé la page Contact
         - Remplacer les rechargement de page par une fonction de mise a jour interne a react.
         - Gerer les props  via Context (mini redux)

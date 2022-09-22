@@ -12,6 +12,8 @@ const Home = () =>{
     return (
         <div className="home">
             <div className="intro">
+                <h1>Guide : Diplomacy is not an option</h1>
+                <br />
                 <p> Bienvenue à toi</p>
                 <br />
                 <p> Es-tu un seigneur injustement harcelé au porte de ton chateau par des citoyens ingrats ?</p>
@@ -20,7 +22,7 @@ const Home = () =>{
                 Les cadavres de ces imbéciles joncheront les imposantes fortification de ta cité.</p>
             </div>
             <br />
-            <p> Sur ce site tu trouveras des builds Orders et conseil pour réussir chaque mission de la campagne</p>
+            <p> Sur ce site tu trouveras des <strong>build Order</strong> et  <strong>conseil</strong> pour réussir <em>chaques missions de la campagne</em> </p>
 
             <br /><br />
 
