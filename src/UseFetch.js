@@ -11,9 +11,9 @@ const UseFetch = (url) => {
         .then (res => {
             if (!res.ok){
                 throw Error ("Impossible de recupérer les données depuis cette ressource")
-            }
-            
+            }     
         return res.json();        
+       
     })
     .then (data => {
         setData(data);

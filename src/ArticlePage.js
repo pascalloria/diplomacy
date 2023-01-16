@@ -9,12 +9,12 @@ const ArticlePage = () => {
     
     const {id} = useParams()
     const history = useHistory()    
-    const  {data: article, isPending, error} = UseFetch("https://api.pascalloria.fr/"+ id)
+    const  {data: article, isPending, error} = UseFetch("http://localhost:5500/"+ id)
     const admin = estAdmin()      
 
     const handleClick = (()=>{
 
-        fetch("https://api.pascalloria.fr/"+id,{
+        fetch("http://localhost:5500/"+id,{
             method:"DELETE",
         }).then (()=> {
             history.push("/")            
