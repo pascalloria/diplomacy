@@ -14,7 +14,7 @@ const Comment = (props) => {
         console.log(comment)
         props.article.comments.splice(comment,1);    
                
-        fetch ("http://localhost:5500/" +props.id ,{
+        fetch ("https://api.pascalloria.fr/" +props.id ,{
             method : "PUT",
             headers:{"Content-Type" : "application/json"},
             body :
@@ -34,7 +34,7 @@ const Comment = (props) => {
         e.preventDefault();       
         props.article.comments.push({"text": comment, "auteur":commentAuteur});
         console.log(comment)
-        fetch ("http://localhost:5500/" +props.id ,{
+        fetch ("https://api.pascalloria.fr/" +props.id ,{
             method : "PUT",
             headers:{"Content-Type" : "application/json"},
             body :

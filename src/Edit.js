@@ -6,7 +6,7 @@ import ArticleForm from "./ArticleForm";
 const Editer = () => {
 
     const {id} = useParams()  
-    const {data: article, isPending, error}= UseFetch("http://localhost:5500/"+ id) 
+    const {data: article, isPending, error}= UseFetch("https://api.pascalloria.fr/"+ id) 
     
     
     return (         
@@ -14,7 +14,7 @@ const Editer = () => {
             <h2> Modifier votre Article </h2> 
             {isPending && <div> Loading ....</div>}
             {error && <div> {error} </div>}
-            {article && ( <ArticleForm  article={article}  method="PUT" url={"http://localhost:5500/"+ id} 
+            {article && ( <ArticleForm  article={article}  method="PUT" url={"https://api.pascalloria.fr/"+ id} 
             />
              )}
      </div>)     ;
