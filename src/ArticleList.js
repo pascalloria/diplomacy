@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ArtcileList = (props) => {
+const ArticleList = (props) => {
     const articles = props.articles
     // {console.log(articles)}
     return (        
@@ -18,4 +18,4 @@ const ArtcileList = (props) => {
      );
 }
  
-export default ArtcileList;
+export default ArticleList;

@@ -9,8 +9,9 @@ const UseFetch = (url) => {
     useEffect(() => {
     fetch(url)
         .then (res => {
+            console.log(res)
             if (!res.ok){
-                throw Error ("Impossible de recupérer les données depuis cette ressource")
+                throw Error ("Impossible de recupérer les données depuis cette ressource" + error)
             }     
         return res.json();        
        

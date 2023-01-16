@@ -1,5 +1,6 @@
 import React ,{ useState }from "react"
 import estAdmin from "./estAdmin"
+import { useHistory } from "react-router-dom"
 
 const Comment = (props) => {
 
@@ -7,6 +8,7 @@ const Comment = (props) => {
     const [comment,setComment] = useState("")
     const [commentAuteur,setCommentAuteur] =useState(localStorage.getItem("Login"))
     let comID = -1
+    const history = useHistory()
 
     const handleClickDelete = ((e,comID)=>{   
         e.preventDefault();     
@@ -21,7 +23,7 @@ const Comment = (props) => {
              JSON.stringify({...props.article})     
         })
         .then( () => {
-            window.location.reload()
+            history.push("/article/"+props.id)  
             })
     })
 
@@ -41,7 +43,7 @@ const Comment = (props) => {
              JSON.stringify({...props.article})     
         })
         .then( () => {
-        window.location.reload()
+            history.push("/article/"+props.id)  
         })
     })
    

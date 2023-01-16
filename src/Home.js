@@ -1,13 +1,12 @@
 
-import ArtcileList from "./ArticleList";
+import ArticleList from "./ArticleList";
 import UseFetch from "./UseFetch";
 import React from "react";
 
 const Home = () =>{
 
-
-    const {data:articles, isPending, error} = UseFetch("https://api.pascalloria.fr/")
-
+    const {data:articles, isPending, error} = UseFetch("https://api.pascalloria.fr") 
+    
     
     return (
         <div className="home">
@@ -28,7 +27,7 @@ const Home = () =>{
 
             {isPending && <div> Loadding ...</div>}
             {error && <div> {error}</div>}
-            {articles && <ArtcileList articles={articles} />}
+            {articles && <ArticleList articles={articles} />}
             
         </div>
     );
